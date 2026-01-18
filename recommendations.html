@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations | Eric Lee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; --border: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; line-height: 1.6; }
+        .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav a:hover, .nav a.active { color: var(--accent); }
+        .container { max-width: 1200px; margin: 60px auto; padding: 0 20px; }
+        .page-header { text-align: center; margin-bottom: 60px; }
+        .page-header h1 { font-size: 2.5rem; color: var(--primary); margin-bottom: 10px; font-weight: 800; letter-spacing: -1px; }
+        .page-header p { color: var(--slate); font-size: 1.1rem; }
+        .rec-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 30px; }
+        .rec-card { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 35px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); display: flex; flex-direction: column; transition: transform 0.2s; }
+        .rec-card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .rec-header { display: flex; align-items: center; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid var(--light); }
+        .rec-avatar { width: 50px; height: 50px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; margin-right: 15px; flex-shrink: 0; font-size: 1.1rem; }
+        .rec-meta h4 { margin: 0; color: var(--primary); font-size: 1.1rem; }
+        .rec-meta p { margin: 2px 0 0; font-size: 0.85rem; color: var(--slate); line-height: 1.4; }
+        .rec-quote { font-size: 2.5rem; color: var(--accent); line-height: 1; margin-bottom: 0px; font-family: serif; }
+        .rec-text { font-size: 0.95rem; color: #334155; line-height: 1.8; flex-grow: 1; font-style: italic; white-space: pre-wrap; }
+        .rec-date { font-size: 0.75rem; color: #94a3b8; margin-top: 25px; text-align: right; font-weight: 600; text-transform: uppercase; }
+        @media (max-width: 768px) { .rec-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">EXECUTIVE SUMMARY</a>
+        <a href="expertise.html">ARCHITECTURE DOMAINS</a>
+        <a href="experience.html">PROFESSIONAL HISTORY</a>
+        <a href="certs.html">CERTIFICATIONS</a>
+        <a href="recommendations.html" class="active">RECOMMENDATIONS</a>
+    </nav>
+    <div class="container">
+        <div class="page-header">
+            <h1>Professional Endorsements</h1>
+            <p>Direct feedback and recognition from senior leadership, colleagues, and industry partners.</p>
+        </div>
+        <div class="rec-grid">
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">CH</div>
+                    <div class="rec-meta">
+                        <h4>Chris How</h4>
+                        <p>Head of Cyber and Information Security</p>
+                        <p><strong>Hume City Council</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Eric served as the Enterprise Security Architect at Hume, where he is responsible for the development and execution of the Enterprise Security Architecture. His main contribution to Hume as: 1. Design and implemented of the security non-functional requirements to support the solution risk assessment process.  2. Development of the Security Architecture Design for the planned and implemented Cyber solution in accordance with the regulatory requirements and industry best practices.   3. Redesigned and improved of the Cyber Risk Management Framework to align with the operational risk framework. 4. Directly facilitated the transition of the security posture as per Hume risk appetite through structured security architectural interventions. 5. Provided high-level technical knowledge transfer that enhanced leadership capability over the past year to support Cyber and IT team.  Eric’s proficiency in translating complex security requirements into business functional architecture was critical to the success of the cybersecurity strategy and resilience program. He is a highly capable architect with a focus on tangible risk reduction; and safeguard organisation infrastructure and data.</div>
+                <div class="rec-date">01/09/26</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">VM</div>
+                    <div class="rec-meta">
+                        <h4>Vriti Magee</h4>
+                        <p>Founder & Principal | Strategy for Human-Centric, Responsible AI</p>
+                        <p><strong>Mawaːga</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I am pleased to highly recommend Eric Lee as an exceptional Principal Security Architect who was instrumental in helping me establish the foundational elements of Enterprise Security Architecture at Transurban. Eric’s elite level expertise, strategic insights, and deep understanding of cybersecurity architecture positioned Transurban to build a resilient, scalable security framework from the ground up.  Engaging with Eric is akin to tapping into a rich repository of knowledge and experience. His advisory approach is both practical and comprehensive, as he draws on real-world operational insights to inform cybersecurity decisions with precision and contextual understanding.  When Eric says, “I do my best,” one knows they’ve been gifted a golden nugget of insight. His advice is consistently grounded in a nuanced understanding of both technical and operational imperatives, making it invaluable in guiding complex security decisions.  Eric’s absence is keenly felt, and it would be a privilege to collaborate with him again. I am confident he would bring exceptional value to any organization seeking a visionary and highly knowledgeable enterprise security architect.</div>
+                <div class="rec-date">11/07/24</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SP</div>
+                    <div class="rec-meta">
+                        <h4>Shaun Price</h4>
+                        <p>Principal & Director – Technology Strategy, AI & Critical Systems (Cyber & OT)</p>
+                        <p><strong>Digital & Cyber Strategies</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I had the pleasure of working with Eric Lee, who served as a Senior Security Architect on my team. During his tenure, Eric demonstrated exceptional technical acumen and an unwavering commitment to excellence that significantly benefited our organization. His contributions were pivotal in developing our Enterprise Security Strategy and advancing our Digital Security Strategy.  Eric's technical expertise is commendable. He possesses a deep understanding of complex security architectures and consistently applies this knowledge to enhance our systems and processes. His analytical skills and thorough approach to problem-solving enabled us to achieve strategic objectives and strengthen our security posture.  Moreover, Eric's dedication and meticulous attention to detail ensured that all projects under his guidance were aligned with industry best practices and compliance standards. His ability to articulate technical concepts to diverse audiences fostered an environment of knowledge and skill-sharing among his peers. I wholeheartedly recommend Eric for any endeavour he chooses to pursue next. He is truly a valuable asset to any team, capable of driving significant security initiatives with professionalism and expertise.</div>
+                <div class="rec-date">05/01/24</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">TT</div>
+                    <div class="rec-meta">
+                        <h4>Troy Tan</h4>
+                        <p>Chief Security Architect</p>
+                        <p><strong>Wesfarmers Health</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Eric is a highly accomplished principal security architect and consultant whose invaluable contributions to thought leadership, security certification quality and reference architecture have significantly and positively impacted our organisation.   With his broad yet in-depth security SME knowledge, he provided honest and qualified insights whilst always maintaining great care for his customers and his craft.  I am certain that I am one in a long line of people who greatly value Eric's commitment, steadfastness and experienced advice.   I wish him well for the many working years to come, and I very highly recommend him as a trusted security advisor for your organisation.</div>
+                <div class="rec-date">07/18/23</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SJ</div>
+                    <div class="rec-meta">
+                        <h4>Shikwang (SK) Jang</h4>
+                        <p>Regional Channel VP, APJ</p>
+                        <p><strong>Radware</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have had a great working experience with Eric during McAfee days. Eric is very pleasant person to work with and his dedication to the customer success and way he handles all the challenges are very professional. Eric is very hands-on and has a strong passion in the IT industry, which I admire.</div>
+                <div class="rec-date">06/06/18</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SN</div>
+                    <div class="rec-meta">
+                        <h4>Sumesh Nair</h4>
+                        <p>Associate Director</p>
+                        <p><strong>EY</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I had the pleasure of working with Eric on a Strategic Security Initiative at ANZ. I was amazed with his ability to analyse heaps of complex data, logs, rules, and make meaning full information out of it. Equally commendable was his ability to present it in a simplified manner. This helped us produce a fit for purpose architecture for our requirement. Eric went an extra mile by identifying potential issues and making this architecture even more robust.    He is a great fella to work with and a valuable member to have in the team. Great technologist, knows his job and sticks to his commitments, that’s Eric. I will highly recommend his work and look forward to working with him again.</div>
+                <div class="rec-date">04/26/16</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">JT</div>
+                    <div class="rec-meta">
+                        <h4>John Thomas</h4>
+                        <p>IDT Manager</p>
+                        <p><strong>Shell</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have been associated with Eric on the security initiative for an year.  Eric has worked at a SME capacity providing product knowledge and supporting the deployment on end points. During the course of the project, I have found him extremely knowledgeable within the areas of network security, intrusion prevention, McAfee products and systems functionality and has contributed for critical implementations during planning, testing and execution phases. He has also provided security review of standards being implemented and have made recomendations for securing systems.  He has been critical to the success of our project and I would attribute his dedication, can-do attitude, hard work and expertise to have played a critical role here.  I would recommend him for future assignments involving designing of secure networks, planning enterprise security deployments and large scale McAfee product deployments.</div>
+                <div class="rec-date">06/17/14</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">KM</div>
+                    <div class="rec-meta">
+                        <h4>Kwadzanai Majaji</h4>
+                        <p>IT Security Operations Lead</p>
+                        <p><strong>Hume City Council</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I’ve had the pleasure of working closely with Eric, an exceptional Security Architect who consistently brings clarity, structure, and strong risk-based thinking to complex technology decisions. His ability to translate business objectives into practical security architecture is outstanding; whether it’s designing for secure cloud and on-prem solutions, or ensuring controls are aligned to frameworks and regulatory requirements.  What sets Eric apart is his balanced approach: he is deeply technical, but also pragmatic and collaborative. He engages stakeholders respectfully, asks the right questions early, and provide clear options and recommendations that enable delivery teams to move forward confidently. His work has materially improved our security posture by strengthening design governance, uplifting control assurance, and reducing risk without creating unnecessary friction.</div>
+                <div class="rec-date">01/11/26</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">KC</div>
+                    <div class="rec-meta">
+                        <h4>Kishore Chennupati</h4>
+                        <p>Sr. Cloud Security Architect</p>
+                        <p><strong>UniSuper</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I had great pleasure working with Eric. With extensive expertise in the industry , Eric successfully led critical projects demonstrating deep technical knowledge and strong leadership.Eric's contribution has earned him respect of both colleagues and senior leaders. Eric would be an asset to any organisation.</div>
+                <div class="rec-date">12/18/24</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SD</div>
+                    <div class="rec-meta">
+                        <h4>Samantha Davies</h4>
+                        <p>Core Networks, Cloud and Infrastructure COE Lead</p>
+                        <p><strong>Telstra</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have had the absolute pleasure of working with Eric at ANZ.  Eric's attention to detail and incredible technical knowledge has directly contributed to the success of multiple projects at ANZ.   Eric is easy to work with, extremely professional and a very valuable member of the team.  I would highly recommend Eric as an employee.</div>
+                <div class="rec-date">12/16/15</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">AV</div>
+                    <div class="rec-meta">
+                        <h4>Abhinav Viswambharan</h4>
+                        <p>Crew Lead - Application & Service Protection</p>
+                        <p><strong>Commonwealth Bank</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have known Eric for over 4 years now and can say without any hesitation that he is one of the best technical resources ANZ has had within the Networks & Security space till date. His ability to synthesize and break down complex technical problems in a very structured way to deliver quality and reliable solutions is well known within ANZ. There have been several occasions where he has been our savior during resolution and recovery of high priority production incidents, in a timely manner.   Over the years Eric has grown from being an Engineer within the team to being the Chapter Lead for Engineers and eventually an Architect within Cyber Defence, making significant contributions towards ANZ’s security strategy, delivery of multiple cyber security initiatives (Segmentation, Endpoint Security, Vulnerability Scanning, Internal Cloud etc) and guiding various infrastructure teams in designing and implementing solutions in a secure way through his in-depth understanding of various  SRAs (Security Reference Architectures) some of which he has co-authored.  Eric has always been very passionate about his work and is relentless in delivering quality outcomes. On the personal front, he has been a great friend and in fact a mentor to me in my CISSP journey (thanks Eric!). Always very kind, considerate and sensitive towards his team and stakeholders. He is one of kind and someone I have no hesitation in recommending Security Architecture/Consulting role!</div>
+                <div class="rec-date">03/27/21</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SG</div>
+                    <div class="rec-meta">
+                        <h4>Simon G</h4>
+                        <p>Cyber Defence Architect</p>
+                        <p><strong>ANZ</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have worked with Eric for many years where his peers and employers have benefited from his long term experience and insight in the field of Cyber Security.  Eric is very professional, has excellent written aptitude, his capability to perform in-depth analysis on complex security concept with the goal of improving on both alignment to security policy and security posture is unmatched. During his time working at ANZ he has assessed hundreds of Security Architectures from various internal business entities, initiatives and projects where he has provided security guidance to each helping them to achieve a secure outcome for the good of the bank while keeping in mind the needs and requirements of the initiatives owners.</div>
+                <div class="rec-date">03/23/21</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">DM</div>
+                    <div class="rec-meta">
+                        <h4>David Mulligan</h4>
+                        <p>Offensive Security & Threat Intelligence</p>
+                        <p><strong>ANZ</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Working with Eric for many years, he is one of the most detail orientated, diligent and hard-working people I’ve had the opportunity to work with. Passionate about his role, Eric is always looking to achieve / deliver the best quality results for his stakeholders. An amazing network engineer and architect, Eric is always looking to keep on top of new trends in the market and is constantly learning making Eric an asset to any team.</div>
+                <div class="rec-date">03/26/21</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SD</div>
+                    <div class="rec-meta">
+                        <h4>Scott Dawson</h4>
+                        <p>Technical Lead, Network Delivery</p>
+                        <p><strong>ANZ</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Eric is a highly motivated and driven individual who:  * is strategic minded, considerate and enjoys a good debate  * strives to turn chaos into simplicity and elegance  * looks to the horizon whilst keeping the foreground in focus  His strong network and platform security knowledge and previous experience in operational and delivery roles in networking and security gives him an empathy/understanding of the challenges faced in these areas.  His architectures/designs therefore not only consider the end goals but also the roadmap/journey required to achieve them.</div>
+                <div class="rec-date">03/23/21</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">TS</div>
+                    <div class="rec-meta">
+                        <h4>Tim Strong</h4>
+                        <p>Security Partner</p>
+                        <p><strong>ANZ</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Eric and I worked together on a high profile, fast paced program to secure an organisations network perimeter.  He has deep technical knowledge, a friendly approach, and is prepared to roll his sleeves up and get the job done when the pressure is on!</div>
+                <div class="rec-date">06/12/18</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SS</div>
+                    <div class="rec-meta">
+                        <h4>Steven Sepac</h4>
+                        <p>Product Owner | AIOps | Proud Father | Volleyball Addict</p>
+                        <p><strong>Telstra</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">Working with Eric allowed me and the rest of the team to navigate successfully through complex network configurations. Without his help and valueable know-how, we would not have been able to meet our aggressive timelines for replacing existing Enterprise email gateways with no down time in service. He will think of multiple plans of attack to solve a problem, allowing you to take the best course of action.</div>
+                <div class="rec-date">06/08/18</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">SJ</div>
+                    <div class="rec-meta">
+                        <h4>Simon Jones</h4>
+                        <p>Cyber Security Architect</p>
+                        <p><strong>SYBER Services</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I have recently had the pleasure of working closely with Eric on the ANZ Strategic Perimeter Security Programme. Eric's ability to consume and process swathes of network and firewall traffic information was simply amazing, providing the robust raw material upon which we based key design decisions. Eric is intelligent, articulate, a first-rate technologist and a great bloke. I cannot recommend his work highly enough, and look forward to our future collaboration!</div>
+                <div class="rec-date">06/21/14</div>
+            </div>
+
+            <div class="rec-card">
+                <div class="rec-header">
+                    <div class="rec-avatar">TT</div>
+                    <div class="rec-meta">
+                        <h4>Tyson Then MACS (Snr) CP</h4>
+                        <p>Senior Transformation Consulting Architect - VMware by Broadcom</p>
+                        <p><strong>Broadcom</strong></p>
+                    </div>
+                </div>
+                <div class="rec-quote">“</div>
+                <div class="rec-text">I worked with Eric on a major transformational project for one of Australia's largest financial institutions.  Eric has a breadth and depth of IT knowledge across technologies which allows him to talk with familiarity on many subjects (storage, networking, cloud, security, OS).  Eric has demonstrated keen insight in security concepts and he is passionate about his domain and always happy to share his passion with his team.  He is extremely focussed and hard-working, always going the extra mile.  Eric drives others to maintain high quality standards and he will never veer from his strong value system.  I recommend Eric and would see him as a strong security resource for any IT Department.</div>
+                <div class="rec-date">03/28/21</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
