@@ -1,161 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Eric Lee</title>
+    <title>Experience | Eric Lee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; }
         body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; }
+        
+        /* Navigation */
         .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); }
         .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; }
-        .nav a:hover { color: var(--accent); }
+        .nav a:hover, .nav a.active { color: var(--accent); }
 
+        /* Layout */
         .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
-        .cert-card { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
-        
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .cert-category { border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; transition: 0.3s; }
-        .cert-category:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .category-icon { font-size: 2rem; margin-bottom: 15px; display: block; }
-        .category-title { font-weight: 800; color: var(--primary); margin-bottom: 15px; display: block; border-bottom: 2px solid var(--accent); width: fit-content; }
-        
-        .cert-list { list-style: none; padding: 0; margin: 0; }
-        .cert-list li { margin-bottom: 10px; font-size: 0.9rem; font-weight: 600; color: var(--slate); display: flex; align-items: center; }
-        .cert-list li::before { content: "✓"; color: var(--accent); margin-right: 10px; font-weight: 900; }
+        .card { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
 
-        .verification-bar { background: var(--primary); color: white; padding: 30px; border-radius: 12px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; }
-        .v-text h4 { margin: 0; color: var(--accent); }
-        .v-text p { margin: 5px 0 0 0; font-size: 0.85rem; opacity: 0.8; }
-        .v-links a { color: white; font-weight: 700; text-decoration: underline; margin-left: 20px; font-size: 0.9rem; }
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 850px) {
+            .nav { flex-wrap: wrap; gap: 10px; padding: 10px; height: auto; }
+            .nav a { flex: 1 1 40%; text-align: center; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px; }
+            .container { margin: 20px auto; padding: 0 15px; }
+            .card { padding: 25px; }
+        }
     </style>
 </head>
 <body>
    <nav class="nav">
         <a href="index.html">EXECUTIVE SUMMARY</a>
         <a href="expertise.html">ARCHITECTURE DOMAINS</a>
-        <a href="experience.html">PROFESSIONAL HISTORY</a>
-        <a href="certs.html" class="active">CERTIFICATIONS</a>
+        <a href="experience.html" class="active">PROFESSIONAL HISTORY</a>
+        <a href="certs.html">CERTIFICATIONS</a>
         <a href="recommendations.html">RECOMMENDATIONS</a>
     </nav>
 
     <div class="container">
-        <div class="cert-card">
-            <h2 style="text-align:center; margin-top:0;">Professional Validation</h2>
-            <p style="text-align:center; color: var(--slate); max-width: 600px; margin: 0 auto;">My expertise is backed by globally recognized standards in security management, audit, and cloud architecture.</p>
-
-            <div class="cert-grid">
-                <div class="cert-category">
-                    <span class="category-icon">🛡️</span>
-                    <span class="category-title">Architecture & GRC</span>
-                    <ul class="cert-list">
-                        <li>CISSP (Certified Information Systems Security Professional)</li>
-                        <li>SABSA Foundation (Chartered Architect)</li>
-                        <li>ISO 27002 Certified Professional</li>
-			<li>ISC2 Building AI Strategy</li>
-                    </ul>
-                </div>
-
-                <div class="cert-category">
-                    <span class="category-icon">☁️</span>
-                    <span class="category-title">Cloud & Infrastructure</span>
-                    <ul class="cert-list">
-                        <li>AWS Certified Security Specialty</li>
-                        <li>GCP Essentials / Security Specialization</li>
-                        <li>Check Point Certified Administrator (CCSA)</li>
-                        <li>Palo Alto PAN-ACE</li>
-                    </ul>
-                </div>
-
-                <div class="cert-category">
-                    <span class="category-icon">🔐</span>
-                    <span class="category-title">Offensive & Operations</span>
-                    <ul class="cert-list">
-                        <li>CEH v7 (Certified Ethical Hacker)</li>
-                        <li>Bluecoat Certified Professional</li>
-                        <li>Checkpoint Certified Professional</li>
-                        <li>Cisco Engineer</li>
-                        <li>Cyberguard / McAfee Specialist</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="verification-bar">
-                <div class="v-text">
-                    <h4>Live Verification</h4>
-                    <p>Verified digital transcripts and blockchain-backed credentials.</p>
-                </div>
-                <div class="v-links">
-                    <a href="https://www.credly.com/users/ker-ping-lee.eaeb526c" target="_blank">Credly Profile</a>
-                    <a href="https://learn.microsoft.com/en-us/users/ericlee-7957" target="_blank">Microsoft Transcript</a>
-                </div>
+        <div class="card">
+            <h2 style="text-align:center; margin-top:0;">Professional History</h2>
+            <p style="text-align:center; color: var(--slate); margin-bottom: 40px;">Detailed timeline of roles and achievements.</p>
+            
+            <div style="text-align: center; padding: 40px; background: #f8fafc; border-radius: 8px; border: 2px dashed #e2e8f0;">
+                <p style="color: var(--slate); font-weight: 600;">Content to be added.</p>
             </div>
         </div>
     </div>
 </body>
 </html>
-/* --- MOBILE RESPONSIVENESS ADDITIONS --- */
-    @media (max-width: 850px) {
-        /* 1. Fix Navigation Bar wrapping */
-        .nav {
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 10px;
-            height: auto;
-        }
-        .nav a {
-            font-size: 0.75rem;
-            padding: 5px 10px;
-            background: rgba(255,255,255,0.1); /* Adds button-like look */
-            border-radius: 4px;
-            text-align: center;
-            flex: 1 1 auto; /* Allows links to grow/shrink to fit lines */
-        }
-
-        /* 2. Fix Layout Grids (Index, Certs, Recs) */
-        /* Forces grids to become a single column stack */
-        .container, 
-        .rec-grid, 
-        .cert-grid, 
-        .feature-grid, 
-        .pillar-grid {
-            display: flex !important;
-            flex-direction: column;
-            grid-template-columns: 1fr !important;
-            width: 100% !important;
-            box-sizing: border-box;
-            margin-top: 20px;
-        }
-
-        /* 3. Adjust Spacing & Padding */
-        .container {
-            padding: 0 15px; /* Reduce side padding */
-            margin-top: 20px;
-        }
-        .main-card, 
-        .expertise-card, 
-        .cert-card, 
-        .sidebar, 
-        .rec-card {
-            padding: 25px !important; /* Reduce massive desktop padding */
-            width: auto;
-        }
-
-        /* 4. Fix Sidebar (Index Page) */
-        .sidebar {
-            order: -1; /* Keeps profile picture on top */
-            margin-bottom: 20px;
-            max-width: 100%;
-        }
-        
-        /* 5. Typography Tweaks */
-        h1 { font-size: 2rem; }
-        h2 { font-size: 1.5rem; }
-        .hero { height: auto; padding: 60px 20px; text-align: center; }
-        
-        /* 6. Recs Page Specifics */
-        .rec-grid { gap: 20px; }
-        .rec-quote { display: none; } /* Hide large quote marks to save space */
-    }
