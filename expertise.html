@@ -141,3 +141,66 @@
     </div>
 </body>
 </html>
+/* --- MOBILE RESPONSIVENESS ADDITIONS --- */
+    @media (max-width: 850px) {
+        /* 1. Fix Navigation Bar wrapping */
+        .nav {
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            height: auto;
+        }
+        .nav a {
+            font-size: 0.75rem;
+            padding: 5px 10px;
+            background: rgba(255,255,255,0.1); /* Adds button-like look */
+            border-radius: 4px;
+            text-align: center;
+            flex: 1 1 auto; /* Allows links to grow/shrink to fit lines */
+        }
+
+        /* 2. Fix Layout Grids (Index, Certs, Recs) */
+        /* Forces grids to become a single column stack */
+        .container, 
+        .rec-grid, 
+        .cert-grid, 
+        .feature-grid, 
+        .pillar-grid {
+            display: flex !important;
+            flex-direction: column;
+            grid-template-columns: 1fr !important;
+            width: 100% !important;
+            box-sizing: border-box;
+            margin-top: 20px;
+        }
+
+        /* 3. Adjust Spacing & Padding */
+        .container {
+            padding: 0 15px; /* Reduce side padding */
+            margin-top: 20px;
+        }
+        .main-card, 
+        .expertise-card, 
+        .cert-card, 
+        .sidebar, 
+        .rec-card {
+            padding: 25px !important; /* Reduce massive desktop padding */
+            width: auto;
+        }
+
+        /* 4. Fix Sidebar (Index Page) */
+        .sidebar {
+            order: -1; /* Keeps profile picture on top */
+            margin-bottom: 20px;
+            max-width: 100%;
+        }
+        
+        /* 5. Typography Tweaks */
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.5rem; }
+        .hero { height: auto; padding: 60px 20px; text-align: center; }
+        
+        /* 6. Recs Page Specifics */
+        .rec-grid { gap: 20px; }
+        .rec-quote { display: none; } /* Hide large quote marks to save space */
+    }
