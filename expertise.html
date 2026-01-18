@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Domains | Eric Lee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; --border: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; }
+        .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav a:hover { color: var(--accent); }
+        
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .expertise-card { background: white; padding: 60px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+        
+        h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; text-align: center; font-weight: 800; }
+        .subtitle { text-align: center; color: var(--slate); margin-bottom: 60px; font-size: 1.1rem; }
+
+        /* Pillar Layout */
+        .pillar-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .pillar { padding-bottom: 30px; border-bottom: 1px solid var(--border); }
+        .pillar-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .pillar-icon { font-size: 1.5rem; background: var(--primary); color: var(--accent); width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+        .pillar-title { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+
+        .capability-box { background: #f8fafc; padding: 20px; border-radius: 12px; border-left: 4px solid var(--accent); margin-bottom: 20px; }
+        .capability-box h4 { margin: 0 0 10px 0; font-size: 0.95rem; color: var(--primary); }
+        .capability-box p { font-size: 0.9rem; color: var(--slate); margin: 0; line-height: 1.6; }
+
+        .tech-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; margin-top: 15px; }
+        .tech-item { background: white; border: 1px solid var(--border); padding: 5px 12px; border-radius: 6px; font-size: 0.75rem; font-weight: 700; color: var(--primary); }
+
+        @media (max-width: 850px) { .pillar-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">EXECUTIVE SUMMARY</a>
+        <a href="expertise.html" style="color:var(--accent)">ARCHITECTURE DOMAINS</a>
+        <a href="experience.html">PROFESSIONAL HISTORY</a>
+        <a href="certs.html">CERTIFICATIONS</a>
+    </nav>
+
+    <div class="container">
+        <div class="expertise-card">
+            <h2>Architectural Domains & Core Expertise</h2>
+            <p class="subtitle">A multidisciplinary approach to securing enterprise-scale infrastructure.</p>
+
+            <div class="pillar-grid">
+                
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">⚖️</div>
+                        <h3 class="pillar-title">Governance & GRC</h3>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Security Framework Realization</h4>
+                        <p>Translating abstract standards into enforceable architecture. Expert in <strong>Essential Eight Maturity 2</strong>, APRA CPS 234, and <strong>VPDSS</strong> for Victorian Government and Financial sectors.</p>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Risk-Based Design</h4>
+                        <p>Executing high-stakes Threat Risk Assessments (TRA), including <strong>GCP Vertex AI Machine Learning</strong> environments for Tier-1 banks.</p>
+                    </div>
+                    <ul class="tech-list">
+                        <li class="tech-item">SABSA / TOGAF</li>
+                        <li class="tech-item">Essential Eight</li>
+                        <li class="tech-item">Open ESA</li>
+                        <li class="tech-item">APRA CPS 234</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">🛡️</div>
+                        <h3 class="pillar-title">Modern Paradigms</h3>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Zero Trust & Identity</h4>
+                        <p>Authoring <strong>"BeyondCorp" Zero Trust Reference Architectures</strong>. Implementing phish-resistant, passwordless MFA and Airlock Digital Application control.</p>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Network Micro-segmentation</h4>
+                        <p>Designing SDN security patterns to isolate high-value assets using <strong>Illumio, Guardicore, and ShieldX</strong>, plus Anycast aware load balanced firewalls.</p>
+                    </div>
+                    <ul class="tech-list">
+                        <li class="tech-item">BeyondCorp</li>
+                        <li class="tech-item">Illumio</li>
+                        <li class="tech-item">Anycast FWLB</li>
+                        <li class="tech-item">Airlock Digital</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">☁️</div>
+                        <h3 class="pillar-title">Cloud & Infrastructure</h3>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Multi-Cloud Guardrails</h4>
+                        <p>Architecting secure Landing Zones and service certifications for <strong>Azure (API-M, Bastion, Key Vault)</strong> and AWS/GCP blueprint assessments.</p>
+                    </div>
+                    <div class="capability-box">
+                        <h4>OT / Industrial Security</h4>
+                        <p>Securing critical energy infrastructure through <strong>Trusted Third Party OT Access patterns</strong> and Purdue Model segmentation.</p>
+                    </div>
+                    <ul class="tech-list">
+                        <li class="tech-item">AWS Control Tower</li>
+                        <li class="tech-item">Azure Blueprints</li>
+                        <li class="tech-item">OT Access Patterns</li>
+                        <li class="tech-item">Cloud Re-zoning</li>
+                    </ul>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">📡</div>
+                        <h3 class="pillar-title">Cyber Operations</h3>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Application Security & Lifecycle</h4>
+                        <p>Implementing <strong>OWASP SAMM v2.0</strong> frameworks and authenticated vulnerability scanning architectures for enterprise-wide security uplift.</p>
+                    </div>
+                    <div class="capability-box">
+                        <h4>Endpoint & SOC Design</h4>
+                        <p>Designing <strong>SOC/SIEM architectures</strong> and serving as the global SME for <strong>80,000-node</strong> McAfee endpoint security deployments.</p>
+                    </div>
+                    <ul class="tech-list">
+                        <li class="tech-item">OWASP SAMM</li>
+                        <li class="tech-item">SOC/SIEM</li>
+                        <li class="tech-item">Algosec</li>
+                        <li class="tech-item">McAfee SME</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional History | Eric Lee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; --border: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; }
+        .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav a:hover { color: var(--accent); }
+        .container { max-width: 1100px; margin: 60px auto; padding: 0 20px; }
+        .experience-card { background: white; padding: 60px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+        .timeline-item { position: relative; padding-left: 50px; margin-bottom: 80px; border-left: 3px solid var(--border); }
+        .timeline-item::before { content: ""; position: absolute; left: -11px; top: 0; width: 20px; height: 20px; background: white; border: 4px solid var(--accent); border-radius: 50%; z-index: 2; }
+        .company-row { display: flex; justify-content: space-between; align-items: baseline; }
+        .company { font-size: 1.6rem; color: var(--primary); font-weight: 800; margin: 0; }
+        .duration { font-family: monospace; font-size: 0.9rem; color: var(--slate); font-weight: 700; }
+        .job-title { color: var(--accent); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1.5px; margin: 8px 0 20px 0; display: block; }
+        .depth-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 20px; }
+        .depth-section { background: #f8fafc; padding: 20px; border-radius: 8px; border: 1px solid var(--border); }
+        .depth-section h4 { margin: 0 0 10px 0; font-size: 0.85rem; text-transform: uppercase; color: var(--slate); letter-spacing: 1px; }
+        .depth-section p, .depth-section li { font-size: 0.9rem; margin: 0; color: #334155; line-height: 1.5; }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .tag { background: #f1f5f9; color: var(--primary); padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: 700; border: 1px solid #cbd5e1; }
+        h2 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; text-align: center; font-weight: 800; }
+        .subtitle { text-align: center; color: var(--slate); margin-bottom: 60px; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html">EXECUTIVE SUMMARY</a>
+        <a href="expertise.html">ARCHITECTURE DOMAINS</a>
+        <a href="experience.html" style="color:var(--accent)">PROFESSIONAL HISTORY</a>
+        <a href="certs.html">CERTIFICATIONS</a>
+    </nav>
+
+    <div class="container">
+        <div class="experience-card">
+            <h2>Career Architecture & Strategic Impact</h2>
+            <p class="subtitle">A legacy of securing critical infrastructure and driving digital trust.</p>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">Hume City Council</h3>
+                    <span class="duration">2025 — PRESENT</span>
+                </div>
+                <span class="job-title">Enterprise Security Architect</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Strategic Scope</h4>
+                        <p>Leading the <strong>Enterprise Security Architecture (ESA)</strong> and <strong>Cyber Risk Management Framework</strong> advisory for the council.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Technical guidance for <strong>Essential Eight Maturity 2</strong>.</li>
+                            <li>Strategy for phish-resistant MFA and <strong>Airlock Digital</strong> Application control.</li>
+                            <li>Architecting Entra ID remediation and SOC/SIEM builds.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">Essential 8</span> <span class="tag">SABSA</span> <span class="tag">TOGAF</span> <span class="tag">Airlock Digital</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">UniSuper</h3>
+                    <span class="duration">2024</span>
+                </div>
+                <span class="job-title">Security Architect</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Program Context</h4>
+                        <p>Established security architecture foundations for one of Australia's largest superannuation funds.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Architected Stage 1 security using <strong>Open ESA</strong> and TOGAF ADM.</li>
+                            <li>Standardized security patterns for <strong>SaaS adoption</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">SaaS Security</span> <span class="tag">Open ESA</span> <span class="tag">APRA CPS 234</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">Astralas (Contract: AGL, Shell, Transurban)</h3>
+                    <span class="duration">2022 — 2024</span>
+                </div>
+                <span class="job-title">Senior Security Architect</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Strategic Initiatives</h4>
+                        <p>Managed strategic security initiatives for critical infrastructure and digital transformation programs.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Architected <strong>OT Trusted Third Party Access</strong> patterns for AGL.</li>
+                            <li>Cybersecurity strategy build (2025) and <strong>OWASP SAMM v2.0</strong> implementation for Transurban.</li>
+                            <li>Certified Azure services (Bastion, API-M, Firewall, Key Vault) for enterprise guardrails.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">OWASP SAMM</span> <span class="tag">Azure Guardrails</span> <span class="tag">OT Security</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">Deloitte Australia</h3>
+                    <span class="duration">2021 — 2022</span>
+                </div>
+                <span class="job-title">Cloud Security Architect Specialist (Senior Manager)</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Major Projects</h4>
+                        <p>Trusted advisor for Big 4 Banking cloud migrations and energy sector security patterns.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Performed <strong>GCP Vertex AI Threat Risk Assessment</strong> for NAB.</li>
+                            <li>Created ESA patterns for Container Security, App Security, and <strong>PAM</strong> for Jemena.</li>
+                            <li>Remediation architecture for Australia Post (Cryptography and DLP).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">GCP Vertex AI</span> <span class="tag">TRA</span> <span class="tag">PAM</span> <span class="tag">Container Security</span>
+                </div>
+            </div>
+
+            <div class="timeline-item" style="border-left-color: var(--accent);">
+                <div class="company-row">
+                    <h3 class="company">ANZ Bank</h3>
+                    <span class="duration">2011 — 2021</span>
+                </div>
+                <span class="job-title">Cyber Defence Security Architect</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Scale & Innovation</h4>
+                        <p>Led the shift from traditional perimeter defense to modern Zero-Trust models for a global Tier-1 bank.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Authored the <strong>"BeyondCorp" Zero Trust Reference Architecture</strong>.</li>
+                            <li>Designed <strong>Anycast Aware Load Balanced Firewalls</strong> for DC segmentation.</li>
+                            <li>Architected SME for <strong>80,000 node</strong> McAfee Endpoint security deployments.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">BeyondCorp</span> <span class="tag">Zero Trust</span> <span class="tag">Anycast FWLB</span> <span class="tag">Microsegmentation</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">McAfee</h3>
+                    <span class="duration">2008 — 2011</span>
+                </div>
+                <span class="job-title">Security Product Specialist</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Product Mastery</h4>
+                        <p>Technical advisor and SME for the McAfee enterprise security suite.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Technical lead for <strong>Intrushield IPS</strong> and <strong>Foundstone</strong> Vulnerability Manager.</li>
+                            <li>Managed global escalations for ePO and Secure Content Management.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">IPS</span> <span class="tag">ePO</span> <span class="tag">Vulnerability Management</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">Dynasafe Technologies</h3>
+                    <span class="duration">2006 — 2008</span>
+                </div>
+                <span class="job-title">Technical Consultant</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Offensive Security</h4>
+                        <p>Performed <strong>penetration testing</strong> via Metasploit and introduced advanced security products to market.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Conducted POCs using Backtrack, Nessus, and nmap.</li>
+                            <li>Implemented solutions for <strong>Sourcefire</strong>, <strong>Checkpoint</strong>, and <strong>Tippingpoint</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">Penetration Testing</span> <span class="tag">Metasploit</span> <span class="tag">Nessus</span>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="company-row">
+                    <h3 class="company">HP / NCS (Singapore Government)</h3>
+                    <span class="duration">2004 — 2006</span>
+                </div>
+                <span class="job-title">Network Engineer</span>
+                <div class="depth-grid">
+                    <div class="depth-section">
+                        <h4>Government Foundations</h4>
+                        <p>Secured critical ministries for the Singapore government, including the <strong>Attorney General’s Chambers</strong>.</p>
+                    </div>
+                    <div class="depth-section">
+                        <h4>Key Deliverables</h4>
+                        <ul style="padding-left:18px;">
+                            <li>Administered Cyberguard firewalls.</li>
+                            <li>Designed <strong>Business Continuity Plans (BCP)</strong> and disaster recovery for AGC.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-tags">
+                    <span class="tag">IDS</span> <span class="tag">BCP/DR</span> <span class="tag">Government Security</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
