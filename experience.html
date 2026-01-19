@@ -1,97 +1,167 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Eric Lee</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <title>Experience | Eric Lee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; }
-        body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; }
-        .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); }
-        .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; }
-        .nav a:hover { color: var(--accent); }
+        :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; --border: #e2e8f0; }
+        body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; line-height: 1.6; }
+        
+        /* Navigation */
+        .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; transition: 0.3s; }
+        .nav a:hover, .nav a.active { color: var(--accent); }
 
+        /* Layout */
         .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
-        .cert-card { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
-        
-        .cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
-        .cert-category { border: 1px solid #e2e8f0; padding: 25px; border-radius: 12px; transition: 0.3s; }
-        .cert-category:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .category-icon { font-size: 2rem; margin-bottom: 15px; display: block; }
-        .category-title { font-weight: 800; color: var(--primary); margin-bottom: 15px; display: block; border-bottom: 2px solid var(--accent); width: fit-content; }
-        
-        .cert-list { list-style: none; padding: 0; margin: 0; }
-        .cert-list li { margin-bottom: 10px; font-size: 0.9rem; font-weight: 600; color: var(--slate); display: flex; align-items: center; }
-        .cert-list li::before { content: "✓"; color: var(--accent); margin-right: 10px; font-weight: 900; }
+        .card { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
 
-        .verification-bar { background: var(--primary); color: white; padding: 30px; border-radius: 12px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; }
-        .v-text h4 { margin: 0; color: var(--accent); }
-        .v-text p { margin: 5px 0 0 0; font-size: 0.85rem; opacity: 0.8; }
-        .v-links a { color: white; font-weight: 700; text-decoration: underline; margin-left: 20px; font-size: 0.9rem; }
+        /* Experience Styles */
+        .exp-item { border-left: 3px solid var(--accent); padding-left: 30px; margin-bottom: 50px; position: relative; }
+        .exp-item::before { content: ""; position: absolute; left: -10px; top: 0; width: 16px; height: 16px; background: var(--accent); border-radius: 50%; border: 4px solid white; }
+        .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 15px; }
+        .role-title { font-size: 1.25rem; font-weight: 800; color: var(--primary); margin: 0; }
+        .company { font-weight: 600; color: var(--accent); font-size: 1rem; margin: 4px 0; }
+        .date { font-size: 0.85rem; font-weight: 700; color: var(--slate); text-transform: uppercase; background: #f1f5f9; padding: 4px 12px; border-radius: 20px; }
+        .exp-list { padding-left: 20px; margin: 15px 0 0 0; color: var(--slate); font-size: 0.95rem; }
+        .exp-list li { margin-bottom: 8px; }
+        .sub-client { font-weight: 700; color: var(--primary); margin-top: 10px; display: block; }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 850px) {
+            .nav { flex-wrap: wrap; gap: 10px; padding: 10px; height: auto; }
+            .nav a { flex: 1 1 40%; text-align: center; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px; }
+            .container { margin: 20px auto; padding: 0 15px; }
+            .card { padding: 30px 20px; }
+            .exp-header { flex-direction: column; }
+            .date { margin-top: 10px; display: inline-block; }
+        }
     </style>
 </head>
 <body>
    <nav class="nav">
         <a href="index.html">EXECUTIVE SUMMARY</a>
         <a href="expertise.html">ARCHITECTURE DOMAINS</a>
-        <a href="experience.html">PROFESSIONAL HISTORY</a>
-        <a href="certs.html" class="active">CERTIFICATIONS</a>
+        <a href="experience.html" class="active">PROFESSIONAL HISTORY</a>
+        <a href="certs.html">CERTIFICATIONS</a>
         <a href="recommendations.html">RECOMMENDATIONS</a>
     </nav>
 
     <div class="container">
-        <div class="cert-card">
-            <h2 style="text-align:center; margin-top:0;">Professional Validation</h2>
-            <p style="text-align:center; color: var(--slate); max-width: 600px; margin: 0 auto;">My expertise is backed by globally recognized standards in security management, audit, and cloud architecture.</p>
-
-            <div class="cert-grid">
-                <div class="cert-category">
-                    <span class="category-icon">🛡️</span>
-                    <span class="category-title">Architecture & GRC</span>
-                    <ul class="cert-list">
-                        <li>CISSP (Certified Information Systems Security Professional)</li>
-                        <li>SABSA Foundation (Chartered Architect)</li>
-                        <li>ISO 27002 Certified Professional</li>
-			<li>ISC2 Building AI Strategy</li>
-                    </ul>
+        <div class="card">
+            <h2 style="text-align:center; margin-top:0;">Professional History</h2>
+            <p style="text-align:center; color: var(--slate); margin-bottom: 60px;">20+ years of Security leadership across Tier-1 Banking, Energy, and Government sectors.</p>
+            
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Enterprise Security Architect</h3>
+                        <p class="company">Hume City Council</p>
+                    </div>
+                    <span class="date">Feb 2025 – Present</span>
                 </div>
-
-                <div class="cert-category">
-                    <span class="category-icon">☁️</span>
-                    <span class="category-title">Cloud & Infrastructure</span>
-                    <ul class="cert-list">
-                        <li>AWS Certified Security Specialty</li>
-                        <li>GCP Essentials / Security Specialization</li>
-                        <li>Check Point Certified Administrator (CCSA)</li>
-                        <li>Palo Alto PAN-ACE</li>
-                    </ul>
-                </div>
-
-                <div class="cert-category">
-                    <span class="category-icon">🔐</span>
-                    <span class="category-title">Offensive & Operations</span>
-                    <ul class="cert-list">
-                        <li>CEH v7 (Certified Ethical Hacker)</li>
-                        <li>Bluecoat Certified Professional</li>
-                        <li>Checkpoint Certified Professional</li>
-                        <li>Cisco Engineer</li>
-                        <li>Cyberguard / McAfee Specialist</li>
-                    </ul>
-                </div>
+                <ul class="exp-list">
+                    <li>Establishing the <strong>Enterprise Security Architecture (ESA)</strong> utilizing TOGAF and SABSA deliverables maps.</li>
+                    <li>Defining Security Principles, Layers of Isolation, and the Security Domain Model/Trust Framework.</li>
+                    <li>Driving strategy for phish-resistant MFA, Purview DLP, Airlock Digital Application control, and SOC/SIEM architecture.</li>
+                    <li>Providing technical guidance for <strong>Essential Eight Maturity 2</strong> compliance.</li>
+                </ul>
             </div>
 
-            <div class="verification-bar">
-                <div class="v-text">
-                    <h4>Live Verification</h4>
-                    <p>Verified digital transcripts and blockchain-backed credentials.</p>
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Security Architect</h3>
+                        <p class="company">UniSuper</p>
+                    </div>
+                    <span class="date">May 2024 – Dec 2024</span>
                 </div>
-                <div class="v-links">
-                    <a href="https://www.credly.com/users/ker-ping-lee.eaeb526c" target="_blank">Credly Profile</a>
-                    <a href="https://learn.microsoft.com/en-us/users/ericlee-7957" target="_blank">Microsoft Transcript</a>
-                </div>
+                <ul class="exp-list">
+                    <li>Developed security architecture foundations based on TOGAF ADM and Open ESA.</li>
+                    <li>Designed specialized <strong>SaaS security patterns</strong>.</li>
+                </ul>
             </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Senior Security Architect</h3>
+                        <p class="company">Astralas</p>
+                    </div>
+                    <span class="date">Aug 2022 – May 2024</span>
+                </div>
+                <ul class="exp-list">
+                    <li><span class="sub-client">Transurban:</span> Developed 2025 Digital and Cybersecurity strategies; implemented <strong>OWASP SAMM v2.0</strong> framework.</li>
+                    <li><span class="sub-client">AGL Energy:</span> Authored Network Perimeter Security Reference Architecture and established Service Certification Guardrails for Azure services.</li>
+                    <li>Architected Trusted Third Party OT Access Patterns and Cloud Re-zoning/Segmentation frameworks.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Cloud Security Architect Specialist (Senior Manager)</h3>
+                        <p class="company">Deloitte</p>
+                    </div>
+                    <span class="date">May 2021 – Aug 2022</span>
+                </div>
+                <ul class="exp-list">
+                    <li><span class="sub-client">Jemena:</span> Created Enterprise Security Architecture patterns for Containers, Apps, Secrets Management, and OT Environment Access.</li>
+                    <li><span class="sub-client">NAB:</span> Conducted GCP Vertex AI Machine Learning Environment Threat Risk Assessments.</li>
+                    <li><span class="sub-client">Australia Post:</span> Developed remediation architecture and strategy for cryptography and DLP.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Cyber Defence Security Architect & Chapter Lead</h3>
+                        <p class="company">ANZ</p>
+                    </div>
+                    <span class="date">Oct 2013 – Mar 2021</span>
+                </div>
+                <ul class="exp-list">
+                    <li><strong>Chapter Lead:</strong> Managed Network, Cloud, and Endpoint Security standards and advisory across Checkpoint and Palo Alto platforms.</li>
+                    <li>Authored Private Cloud Platform Security Architecture and Internal Network Segmentation Reference Architecture patterns.</li>
+                    <li>Led Zero Trust (BeyondCorp) whitepaper development and micro-segmentation evaluations (Illumio, Guardicore, ShieldX).</li>
+                    <li>Global SME for <strong>80,000-node</strong> McAfee endpoint security deployments and DC Internal Segmentation projects.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Security Product Specialist</h3>
+                        <p class="company">McAfee</p>
+                    </div>
+                    <span class="date">Feb 2008 – Oct 2011</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Technical advisor for Platinum and Gold Select enterprise customers across IPS, Vulnerability Management, and Endpoint Security.</li>
+                    <li>Led technical implementations for Intrushield, Foundstone, and ePO management consoles.</li>
+                </ul>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <h3 class="role-title">Network Engineer</h3>
+                        <p class="company">HP (Singapore Government Sector)</p>
+                    </div>
+                    <span class="date">June 2004 – Jan 2006</span>
+                </div>
+                <ul class="exp-list">
+                    <li>Managed network and systems security coordination for the Ministry of Finance, Parliament House, and Attorney General Chambers.</li>
+                    <li>Led Datacenter reform, BCP setup, and coordination of monthly preventive maintenance for multiple government sites.</li>
+                </ul>
+            </div>
+
         </div>
     </div>
 </body>

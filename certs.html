@@ -1,18 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:;">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
     <title>Certifications | Eric Lee</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #0f172a; --accent: #06b6d4; --slate: #475569; --light: #f8fafc; }
         body { font-family: 'Inter', sans-serif; background: var(--light); margin: 0; color: #1e293b; }
+        
+        /* Navigation */
         .nav { background: var(--primary); padding: 1.2rem; display: flex; justify-content: center; gap: 30px; border-bottom: 3px solid var(--accent); }
         .nav a { color: #94a3b8; text-decoration: none; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; }
-        .nav a:hover { color: var(--accent); }
+        .nav a:hover, .nav a.active { color: var(--accent); }
 
+        /* Layout */
         .container { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
         .cert-card { background: white; padding: 50px; border-radius: 12px; box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
         
@@ -30,6 +36,19 @@
         .v-text h4 { margin: 0; color: var(--accent); }
         .v-text p { margin: 5px 0 0 0; font-size: 0.85rem; opacity: 0.8; }
         .v-links a { color: white; font-weight: 700; text-decoration: underline; margin-left: 20px; font-size: 0.9rem; }
+
+        /* --- MOBILE RESPONSIVENESS --- */
+        @media (max-width: 850px) {
+            .nav { flex-wrap: wrap; gap: 10px; padding: 10px; height: auto; }
+            .nav a { flex: 1 1 40%; text-align: center; background: rgba(255,255,255,0.05); padding: 8px; border-radius: 4px; }
+
+            .container { margin: 20px auto; padding: 0 15px; }
+            .cert-card { padding: 25px; }
+            .cert-grid { grid-template-columns: 1fr; }
+            
+            .verification-bar { flex-direction: column; text-align: center; gap: 20px; }
+            .v-links a { display: block; margin: 10px 0; }
+        }
     </style>
 </head>
 <body>
@@ -88,8 +107,8 @@
                     <p>Verified digital transcripts and blockchain-backed credentials.</p>
                 </div>
                 <div class="v-links">
-                    <a href="https://www.credly.com/users/ker-ping-lee.eaeb526c" target="_blank">Credly Profile</a>
-                    <a href="https://learn.microsoft.com/en-us/users/ericlee-7957" target="_blank">Microsoft Transcript</a>
+                    <a href="https://www.credly.com/users/ker-ping-lee.eaeb526c" target="_blank" rel="noopener noreferrer">Credly Profile</a>
+                    <a href="https://learn.microsoft.com/en-us/users/ericlee-7957" target="_blank" rel="noopener noreferrer">Microsoft Transcript</a>
                 </div>
             </div>
         </div>
