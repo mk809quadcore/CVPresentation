@@ -307,6 +307,17 @@
 </head>
 <body>
 
+<!-- ═══════════ PASSWORD GATE ═══════════ -->
+<div id="gate" style="position:fixed;inset:0;z-index:9999;background:var(--bg);display:flex;align-items:center;justify-content:center;">
+    <div style="text-align:center;max-width:360px;width:90%;">
+        <div style="font-size:2.5rem;margin-bottom:8px;">🔐</div>
+        <h2 style="color:#fff;font-size:1.3rem;margin-bottom:8px;">Eric Lee</h2>
+        <p style="color:var(--muted);font-size:0.85rem;margin-bottom:28px;">Enterprise Security Architect</p>
+        <input id="pw" type="password" placeholder="Enter password" autofocus style="width:100%;padding:14px;background:var(--card);border:1px solid var(--border);border-radius:8px;color:#fff;font-size:1rem;text-align:center;outline:none;transition:border-color 0.2s;font-family:var(--mono);">
+        <p id="gate-err" style="color:var(--red);font-size:0.8rem;margin-top:10px;min-height:20px;"></p>
+    </div>
+</div>
+
 <!-- ═══════════ NAV ═══════════ -->
 <nav class="nav">
     <a href="#profile">Profile</a>
@@ -681,7 +692,6 @@
 
 <!-- ═══════════ SCROLL SPY ═══════════ -->
 <script>
-    // Highlight active nav link based on scroll position
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav a');
     window.addEventListener('scroll', () => {
@@ -693,6 +703,47 @@
             a.classList.toggle('active', a.getAttribute('href') === '#' + current);
         });
     });
+
+    // ── PASSWORD GATE ─────────────────────────────
+    const GATE_HASH = '36650bd1eaf2cd6006060434e782e01f3b87b6a4e498a340a7e24dc6b0ab2f24';
+    const gate = document.getElementById('gate');
+    const pwInput = document.getElementById('pw');
+    const gateErr = document.getElementById('gate-err');
+
+    async function sha256(text) {
+        const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+        return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+    }
+
+    pwInput.addEventListener('keydown', async (e) => {
+        if (e.key !== 'Enter') return;
+        const hash = await sha256(pwInput.value);
+        if (hash === GATE_HASH) {
+            gate.style.transition = 'opacity 0.4s';
+            gate.style.opacity = '0';
+            setTimeout(() => gate.remove(), 400);
+        } else {
+            gateErr.textContent = 'Incorrect password';
+            pwInput.style.borderColor = 'var(--red)';
+            pwInput.value = '';
+            pwInput.focus();
+            pwInput.style.animation = 'none';
+            pwInput.offsetHeight; // trigger reflow
+            pwInput.style.animation = 'shake 0.4s ease';
+        }
+    });
+
+    const shakeKeyframes = `
+        @keyframes shake {
+            0%,100% { transform: translateX(0); }
+            20%     { transform: translateX(-8px); }
+            40%     { transform: translateX(8px); }
+            60%     { transform: translateX(-6px); }
+            80%     { transform: translateX(6px); }
+        }`;
+    const styleSheet = document.createElement('style');
+    styleSheet.textContent = shakeKeyframes;
+    document.head.appendChild(styleSheet);
 </script>
 
 </body>
